@@ -1,0 +1,13 @@
+# 构建产物
+dist/
+*.zip
+
+# 依赖
+node_modules/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+*.log

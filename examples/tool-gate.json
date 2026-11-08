@@ -1,0 +1,4 @@
+{
+  "mode": "allow",
+  "allow": ["fin_*", "astock_*", "backtest_*", "web_fetch", "web_search"]
+}

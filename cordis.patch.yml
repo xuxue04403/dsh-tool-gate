@@ -1,0 +1,15 @@
+# dsh-tool-gate —— 本 bundle 的配置层。
+#
+# 只插入插件自己的 loader 行。想调参就在 profile 的 cordis.patch.yml 里用
+# `- id: tool-gate` + `config: {...}` 定向覆盖（config 是整体替换，不是深合并）。
+- insert:
+    - id: tool-gate
+      name: 'dsh-tool-gate'
+      config:
+        enabled: true
+        file: '.dsh/tool-gate.json'
+        mode: 'off'
+        allow: []
+        deny: []
+        always: []
+        log: false

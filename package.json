@@ -1,0 +1,39 @@
+{
+  "name": "dsh-tool-gate",
+  "version": "0.2.2",
+  "description": "Per-project tool gating for DeepSeek Harness: hide tools the current project does not need, so every step sends a smaller tool list.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "plugin",
+    "tools",
+    "context",
+    "defer-loading"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "install.ps1",
+    "examples"
+  ],
+  "scripts": {
+    "test": "node test/gate.test.mjs"
+  },
+  "engines": {
+    "dsh": ">=0.2.2-rc.0 <0.3.0"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
