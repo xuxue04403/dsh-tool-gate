@@ -21,6 +21,16 @@ dsh 每一步（`preStep`）都会把「可见且 `when` 成立」的工具全�
 
 前置：dsh ≥ `0.2.2-rc.0`；已有一个 profile（`~/.dsh/profiles/<name>`）。
 
+两种方式，任选其一。
+
+**A. 直接从 GitHub 装**（最快，pnpm 会拉仓库并读取里面的 `cordis.patch.yml`）：
+
+```powershell
+dsh plugin --profile quant add github:xuxue04403/dsh-tool-gate
+```
+
+**B. 下载 release 里的 zip**，解压后：
+
 ```powershell
 # 在解压后的插件目录里执行
 pwsh -File .\install.ps1 -Profile quant
